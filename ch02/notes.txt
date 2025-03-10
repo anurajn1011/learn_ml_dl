@@ -1,0 +1,12 @@
+Scikit-Learn Design (refer to documentation for robust treatment; all notes from Geron's text.)
+
+Core Design Principles:
+ - All objects share a consistent and simple interface: 
+ - Estimators: any object that can estimate parameters based on a dataset. Example would be Imputer.
+ - Transformers: Some estimators which can transform a dataset. 
+ - Predictors: Given a dataset, some estimators can make predictions. Hence the name. Example would be Linear Regression
+ 
+ - Inspection: All estimators hyperparameters are accessible via a public instance variables while all the learned parameters are accessible via public instance variables with an underscore suffix
+ - Nonproliferation of classes: Datasets are represented as numpy arrays and hyperparameters are just python strings or numbers.
+ - Composition: Existing building blocks are reused as much as possible.
+ - Sensible defaults: Most parameters have default settings.

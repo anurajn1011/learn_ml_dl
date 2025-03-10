@@ -4,6 +4,10 @@ What is machine learning good for:
  - Fluctuating environments
  - Getting insights about complex problems and large amounts of data
 
+Key Terms:
+- Hyperparameters: config variables that are set prior to training which control aspects of the learning. 
+- Parameters: learned directly from data during the training process. 
+
 Types of Machine Learning Systems
  - Supervised Learning:
 	The training set which is provided to the algorithm includes the desired solutions, called labels
