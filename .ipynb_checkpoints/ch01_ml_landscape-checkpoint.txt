@@ -1,0 +1,40 @@
+What is machine learning good for:
+ - Problems for which existing solutions require a lot of fine tuning or long lists of rules
+ - Complex problems for which using a traditional approach yields no good solution
+ - Fluctuating environments
+ - Getting insights about complex problems and large amounts of data
+
+Key Terms:
+- Hyperparameters: config variables that are set prior to training which control aspects of the learning. 
+- Parameters: learned directly from data during the training process. 
+
+Types of Machine Learning Systems
+ - Supervised Learning:
+	The training set which is provided to the algorithm includes the desired solutions, called labels
+	Examples include: K-nearest neighbors, linear regression, logistic regression, Support Vector Machines(SVM), Decision Trees/Random Forests, and Neural Networks(though some can be unsupervised)
+	Typical supervised tasks include classification and regression.
+ - Unsupervised Learning:
+	The training data is unlabeled, the system tries to learn without guidance. 
+	Example algorithms include: Clustering(K-means, DBSCAN, Hierarchical Cluster Analysis(HCA)), Anomaly Detection and Novelty Detection(One-Class SVM and Isolation Forest, Visualization and Dimensionality Reduction (PCA, Kernel PCA, Locally Linear Emebedding (LLE), and t-Distributed Stochastic Neighbor Embedding(t-SNE)), and Association rule learning (Apriori and Eclat).
+ - Semisupervised Learning
+	Data that is partially trained. Common example is Google Photo's. 
+ - Reinforcement Learning 
+	The learning system, an agent, can observe the environment, select and perform actions, and get rewards in return ot penalties in the form of negative rewards. It then learns by itself what the best strategy is, called a policy/
+ - Batch and Online Learning
+	Batch Learning: First the system is trained, then it is launched into production without further training. If new training is desired, then the model has to be retrained. 
+	Online Learning: The system is incrementally fed data instances sequentially, either individually or in small groups called mini batches. 
+
+Instance based versus Model-based learning
+ - Instance Based: Learns data by heart and flags new data fed to it using a similarity score.
+ - Model Based: Build a model of the data provided and then use that model to make predictions. 
+
+Main Challenges of Machine Learning
+ - Insufficient Quantity of Training Data: Not enough data would cause inaccuracies
+ - Nonrepresentative Training Data: Using data that is not representative of the collection of data the model will perform in is also something to keep in mind. Keep in mind sampling bias, if the sample is too small there will be sampling noise and if it is too large then it can still risk nonrepresentative samples. 
+ - Poor Quality Data: If the data is full of errors, outliers, and noise, it will make it harder for the system to detect patterns. Hence, data cleaning is critical. 
+ - Irrelevant Features: The system should be trained on the relevant features only; feature engineering
+ - Overfitting the Training Data: Model performs well on the training data but not on general data. This occurs when the model is too complex relative to the amount and noisiness of the training data. Constraining a model to make it simpler and avoid overfitting is called regularization. A hyperparameter controls the amount of regularization to apply during learning. 
+ - Underfitting the Training Data: When the model is too simple to learn the underlying structure of the data. 
+ - Testing and validating the model by splitting the data into a training and test set is crucial. If the generalization error is high while the training error is low, then the model is overfitting. 
+ - Hyperparameter Tuning and Model Selection: Holdout validation can be used to tune hyperparameters, using a validation set. 
+ - Data Mismatch: Techniques to find where the model is underperforming, on the training data or the validation data. This is in an effort to get truly representative data. 
